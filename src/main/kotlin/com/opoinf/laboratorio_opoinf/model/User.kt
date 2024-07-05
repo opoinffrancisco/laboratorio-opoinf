@@ -1,14 +1,19 @@
 package com.opoinf.laboratorio_opoinf.model
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
+import jakarta.persistence.*
+import java.util.*
 
 @Entity
 data class AppUser(
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long = 0,
-    var name: String,
-    var email: String
+    @Id
+    @GeneratedValue
+    @Column(name = "id", updatable = false, nullable = false, columnDefinition = "UUID DEFAULT uuid_generate_v4()")
+    var id: UUID,
+    var email: String,
+    var password: String,
+    var role: Role
 )
+
+enum class Role {
+    USER, ADMIN
+}

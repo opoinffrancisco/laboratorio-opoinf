@@ -5,17 +5,18 @@ import com.opoinf.laboratorio_opoinf.service.AppUserService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
+import java.util.*
 
 @RestController
-@RequestMapping("/AppUsers")
+@RequestMapping("/appusers")
 class AppUserController(@Autowired private val AppUserService: AppUserService) {
 
     @GetMapping
     fun getAllAppUsers(): List<AppUser> = AppUserService.findAll()
 
     @GetMapping("/{id}")
-    fun getAppUserById(@PathVariable id: Long): ResponseEntity<AppUser> {
-        val AppUser = AppUserService.findById(id)
+    fun getAppUserById(@PathVariable id: UUID): ResponseEntity<AppUser> {
+        val AppUser = AppUserService.findByUUID(id)
         return if (AppUser != null) {
             ResponseEntity.ok(AppUser)
         } else {
@@ -24,15 +25,14 @@ class AppUserController(@Autowired private val AppUserService: AppUserService) {
     }
 
     @PostMapping
-    fun createAppUser(@RequestBody AppUser: AppUser): AppUser = AppUserService.save(AppUser)
+    fun createAppUser(@RequestBody AppUser: AppUser): AppUser? = AppUserService.save(AppUser)
 
     @PutMapping("/{id}")
-    fun updateUser(@PathVariable id: Long, @RequestBody updatedUser: AppUser): ResponseEntity<AppUser> {
-        val existingUser = AppUserService.findById(id)
+    fun updateUser(@PathVariable id: UUID, @RequestBody updatedUser: AppUser): ResponseEntity<AppUser> {
+        val existingUser = AppUserService.findByUUID(id)
         return if (existingUser != null) {
             // Actualiza los campos del usuario existente con los datos recibidos
             existingUser.apply {
-                name = updatedUser.name
                 email = updatedUser.email
                 // Puedes agregar más campos aquí si es necesario
             }
@@ -44,8 +44,8 @@ class AppUserController(@Autowired private val AppUserService: AppUserService) {
     }
 
     @DeleteMapping("/{id}")
-    fun deleteAppUserById(@PathVariable id: Long): ResponseEntity<Void> {
-        AppUserService.deleteById(id)
+    fun deleteAppUserById(@PathVariable id: UUID): ResponseEntity<Void> {
+        AppUserService.deleteByUUID(id)
         return ResponseEntity.noContent().build()
     }
 }
