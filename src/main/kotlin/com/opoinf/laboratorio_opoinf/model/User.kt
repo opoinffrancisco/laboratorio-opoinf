@@ -6,7 +6,7 @@ import java.util.*
 @Entity
 data class AppUser(
     @Id
-    @GeneratedValue
+    //@GeneratedValue
     @Column(name = "id", updatable = false, nullable = false, columnDefinition = "UUID DEFAULT uuid_generate_v4()")
     var id: UUID,
     var email: String,

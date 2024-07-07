@@ -3,29 +3,39 @@ package com.opoinf.laboratorio_opoinf.service
 import com.opoinf.laboratorio_opoinf.model.AppUser
 import com.opoinf.laboratorio_opoinf.repository.AppUserRepository
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
 import java.util.*
 
 @Service
-class AppUserService(@Autowired private val AppUserRepository: AppUserRepository) {
+class AppUserService(
+    @Autowired private val AppUserRepository: AppUserRepository,
+    private val encoder: PasswordEncoder
+) {
 
     fun save(user: AppUser): AppUser? {
-        val existingUser  = AppUserRepository.findByEmail(user.email)
+        val existingUser: AppUser? = AppUserRepository.findByEmail(user.email)
 
-        return if (existingUser  == null) {
-            AppUserRepository.save(user)
-            user
-        } else null
+        return if (existingUser?.email == user.email) null else {
+            val updated = user.copy(password = encoder.encode(user.password))
+            AppUserRepository.save(updated)
+            updated
+        }
     }
 
-    fun findByUUID(uuid: UUID): AppUser? =
-        AppUserRepository.findByUUID(uuid)
+    fun findByEmail(email: String): AppUser? = AppUserRepository.findByEmail(email)
 
-    fun findAll(): List<AppUser> =
-        AppUserRepository.findAll()
-            .toList()
+    fun findByUUID(uuid: UUID): AppUser? = AppUserRepository.findById(uuid).orElse(null)
 
-    fun deleteByUUID(uuid: UUID): Boolean =
-        AppUserRepository.deleteByUUID(uuid)
+    fun findAll(): List<AppUser> = AppUserRepository.findAll()
+   //.toList()
 
+    fun deleteByUUID(uuid: UUID): Boolean {
+        return if (AppUserRepository.existsById(uuid)) {
+            AppUserRepository.deleteById(uuid)
+            true
+        } else {
+            false
+        }
+    }
 }
