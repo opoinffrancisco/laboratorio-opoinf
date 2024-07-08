@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
+import jakarta.validation.Valid
 
 @RestController
 @RequestMapping("/api/auth")
@@ -17,13 +18,13 @@ class AuthController(
 
   @PostMapping
   fun authenticate(
-    @RequestBody authRequest: AuthenticationRequest
+    @Valid @RequestBody authRequest: AuthenticationRequest
   ): AuthenticationResponse =
     authenticationService.authentication(authRequest)
 
   @PostMapping("/refresh")
   fun refreshAccessToken(
-    @RequestBody request: RefreshTokenRequest
+    @Valid @RequestBody request: RefreshTokenRequest
   ): ResponseEntity<ApiResponse<TokenResponse>> {
     val tokenResponse = authenticationService.refreshAccessToken(request.token)
     return if (tokenResponse != null) {

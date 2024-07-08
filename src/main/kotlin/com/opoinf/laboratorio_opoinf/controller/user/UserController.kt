@@ -3,11 +3,13 @@ package com.opoinf.laboratorio_opoinf.controller.user
 import com.opoinf.laboratorio_opoinf.model.Role
 import com.opoinf.laboratorio_opoinf.model.AppUser
 import com.opoinf.laboratorio_opoinf.service.AppUserService
+import com.opoinf.laboratorio_opoinf.util.exception.BadRequestException
+import com.opoinf.laboratorio_opoinf.util.exception.ResourceNotFoundException
 import com.opoinf.laboratorio_opoinf.util.response.ApiResponse
 import org.springframework.http.HttpStatus
-import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 import java.util.*
+import jakarta.validation.Valid
 
 @RestController
 @RequestMapping("/api/user")
@@ -16,48 +18,35 @@ class UserController(
 ) {
 
   @GetMapping
-  fun listAll(): ResponseEntity<ApiResponse<List<UserResponse>>> {
-    val users = userService.findAll().map { it.toResponse() }
-    return ResponseEntity.ok(ApiResponse(data = users))
+  fun listAll(): List<UserResponse> {
+    return userService.findAll().map { it.toResponse() }
   }
 
   @GetMapping("/{uuid}")
-  fun findByUUID(@PathVariable uuid: UUID): ResponseEntity<ApiResponse<UserResponse>> {
+  fun findByUUID(@PathVariable uuid: UUID): UserResponse {
     val user = userService.findByUUID(uuid)
-    return if (user != null) {
-      ResponseEntity.ok(ApiResponse(data = user.toResponse()))
-    } else {
-      ResponseEntity.status(HttpStatus.NOT_FOUND).body(ApiResponse(message = "Usuario no encontrado.", status = 404))
-    }
+    return user?.toResponse() ?: throw ResourceNotFoundException("Usuario no encontrado.")
   }
 
   @PostMapping
-  fun create(@RequestBody userRequest: UserRequest): ResponseEntity<ApiResponse<UserResponse>> {
+  @ResponseStatus(HttpStatus.CREATED)
+  fun create(@Valid @RequestBody userRequest: UserRequest): UserResponse {
     val user = userService.save(userRequest.toModel())
-    return if (user != null) {
-      ResponseEntity.status(HttpStatus.CREATED).body(ApiResponse(data = user.toResponse(), status = 201))
-    } else {
-      ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ApiResponse(message = "No se pudo crear el usuario.", status = 400))
-    }
+    return user?.toResponse() ?: throw BadRequestException("No se pudo crear el usuario.")
   }
 
   @PutMapping("/{uuid}")
-  fun updateUser(@PathVariable uuid: UUID, @RequestBody updatedUser: AppUser): ResponseEntity<ApiResponse<UserResponse>> {
+  fun updateUser(@PathVariable uuid: UUID, @Valid @RequestBody updatedUser: AppUser): UserResponse {
     val user = userService.editar(uuid, updatedUser)
-    return if (user != null) {
-      ResponseEntity.ok(ApiResponse(data = user.toResponse()))
-    } else {
-      ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ApiResponse(message = "No se pudo editar el usuario.", status = 400))
-    }
+    return user?.toResponse() ?: throw BadRequestException("No se pudo editar el usuario.")
   }
 
   @DeleteMapping("/{uuid}")
-  fun deleteByUUID(@PathVariable uuid: UUID): ResponseEntity<ApiResponse<Void>> {
+  @ResponseStatus(HttpStatus.NO_CONTENT)
+  fun deleteByUUID(@PathVariable uuid: UUID) {
     val success = userService.deleteByUUID(uuid)
-    return if (success) {
-      ResponseEntity.noContent().build()
-    } else {
-      ResponseEntity.status(HttpStatus.NOT_FOUND).body(ApiResponse(message = "Usuario no eliminado.", status = 404))
+    if (!success) {
+      throw ResourceNotFoundException("Usuario no eliminado.")
     }
   }
 
