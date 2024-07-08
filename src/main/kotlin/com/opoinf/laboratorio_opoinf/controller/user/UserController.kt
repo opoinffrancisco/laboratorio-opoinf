@@ -3,7 +3,7 @@ package com.opoinf.laboratorio_opoinf.controller.user
 import com.opoinf.laboratorio_opoinf.model.Role
 import com.opoinf.laboratorio_opoinf.model.AppUser
 import com.opoinf.laboratorio_opoinf.service.AppUserService
-import com.opoinf.laboratorio_opoinf.response.ApiResponse
+import com.opoinf.laboratorio_opoinf.util.response.ApiResponse
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -27,7 +27,7 @@ class UserController(
     return if (user != null) {
       ResponseEntity.ok(ApiResponse(data = user.toResponse()))
     } else {
-      ResponseEntity.status(HttpStatus.NOT_FOUND).body(ApiResponse(message = "Usuario no encontrado."))
+      ResponseEntity.status(HttpStatus.NOT_FOUND).body(ApiResponse(message = "Usuario no encontrado.", status = 404))
     }
   }
 
@@ -35,9 +35,9 @@ class UserController(
   fun create(@RequestBody userRequest: UserRequest): ResponseEntity<ApiResponse<UserResponse>> {
     val user = userService.save(userRequest.toModel())
     return if (user != null) {
-      ResponseEntity.status(HttpStatus.CREATED).body(ApiResponse(data = user.toResponse()))
+      ResponseEntity.status(HttpStatus.CREATED).body(ApiResponse(data = user.toResponse(), status = 201))
     } else {
-      ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ApiResponse(message = "No se pudo crear el usuario."))
+      ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ApiResponse(message = "No se pudo crear el usuario.", status = 400))
     }
   }
 
@@ -47,7 +47,7 @@ class UserController(
     return if (user != null) {
       ResponseEntity.ok(ApiResponse(data = user.toResponse()))
     } else {
-      ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ApiResponse(message = "No se pudo editar el usuario."))
+      ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ApiResponse(message = "No se pudo editar el usuario.", status = 400))
     }
   }
 
@@ -57,7 +57,7 @@ class UserController(
     return if (success) {
       ResponseEntity.noContent().build()
     } else {
-      ResponseEntity.status(HttpStatus.NOT_FOUND).body(ApiResponse(message = "Usuario no eliminado."))
+      ResponseEntity.status(HttpStatus.NOT_FOUND).body(ApiResponse(message = "Usuario no eliminado.", status = 404))
     }
   }
 
@@ -65,6 +65,7 @@ class UserController(
     UserResponse(
       uuid = this.id,
       email = this.email,
+      role = this.role
     )
 
   private fun UserRequest.toModel(): AppUser =

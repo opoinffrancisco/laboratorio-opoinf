@@ -3,6 +3,9 @@ package com.opoinf.laboratorio_opoinf.model
 import jakarta.persistence.*
 import java.util.*
 
+/*
+* AUN NO SE ESTA USANDO
+* */
 @Entity
 data class RoleUser(
     @Id

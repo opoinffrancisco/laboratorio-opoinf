@@ -1,6 +1,7 @@
 package com.opoinf.laboratorio_opoinf.service
 
 import com.opoinf.laboratorio_opoinf.repository.AppUserRepository
+import com.opoinf.laboratorio_opoinf.util.exception.CustomUsernameNotFoundException
 import org.springframework.security.core.userdetails.User
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UserDetailsService
@@ -17,7 +18,7 @@ class CustomUserDetailsService(
   override fun loadUserByUsername(username: String): UserDetails =
     userRepository.findByEmail(username)
       ?.mapToUserDetails()
-      ?: throw UsernameNotFoundException("Not found!")
+      ?: throw CustomUsernameNotFoundException("User with email $username not found!")
 
   private fun ApplicationUser.mapToUserDetails(): UserDetails =
     User.builder()

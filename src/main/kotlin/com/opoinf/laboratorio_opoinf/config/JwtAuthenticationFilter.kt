@@ -2,6 +2,7 @@ package com.opoinf.laboratorio_opoinf.config
 
 import com.opoinf.laboratorio_opoinf.service.CustomUserDetailsService
 import com.opoinf.laboratorio_opoinf.service.TokenService
+import com.opoinf.laboratorio_opoinf.util.exception.ForbiddenException
 import jakarta.servlet.FilterChain
 import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse
@@ -36,8 +37,11 @@ class JwtAuthenticationFilter(
     if (email != null && SecurityContextHolder.getContext().authentication == null) {
       val foundUser = userDetailsService.loadUserByUsername(email)
 
-      if (tokenService.isValid(jwtToken, foundUser))
+      if (tokenService.isValid(jwtToken, foundUser)) {
         updateContext(foundUser, request)
+      } else {
+        throw ForbiddenException("Token JWT no válido o permisos insuficientes")
+      }
 
       filterChain.doFilter(request, response)
     }
