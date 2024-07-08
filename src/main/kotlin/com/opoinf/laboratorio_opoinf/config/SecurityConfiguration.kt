@@ -22,24 +22,32 @@ class SecurityConfiguration(
     jwtAuthenticationFilter: JwtAuthenticationFilter
   ): DefaultSecurityFilterChain {
     http
+      // Deshabilitar CSRF ya que estamos usando tokens JWT que no son vulnerables a CSRF
       .csrf { it.disable() }
       .authorizeHttpRequests {
         it
+          // Permitir acceso sin autenticación a las rutas especificadas
           .requestMatchers("/api/auth", "api/auth/refresh", "/error")
           .permitAll()
+          // Permitir POST sin autenticación a "/api/user" (esto puede ser para registro de usuarios)
           .requestMatchers(HttpMethod.POST, "/api/user")
           .permitAll()
+          // Requerir rol ADMIN para cualquier solicitud a "/api/user**" excepto POST
           .requestMatchers("/api/user**")
           .hasRole("ADMIN")
-          .anyRequest()
-          .fullyAuthenticated()
+          // Requerir autenticación para cualquier otra solicitud
+          .anyRequest().fullyAuthenticated()
       }
+      // Configurar sesión como stateless ya que estamos usando JWT
       .sessionManagement {
         it.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
       }
+      // Configurar proveedor de autenticación
       .authenticationProvider(authenticationProvider)
+      // Añadir filtro de autenticación JWT antes del filtro de autenticación por nombre de usuario y contraseña
       .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter::class.java)
 
+    // Construir y devolver la cadena de filtros de seguridad
     return http.build()
   }
 }

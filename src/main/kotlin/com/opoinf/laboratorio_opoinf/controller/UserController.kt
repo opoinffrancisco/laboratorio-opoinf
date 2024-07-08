@@ -9,7 +9,9 @@ import java.util.*
 
 @RestController
 @RequestMapping("/appusers")
-class AppUserController(@Autowired private val AppUserService: AppUserService) {
+class AppUserController(
+    @Autowired private val AppUserService: AppUserService
+) {
 
     @GetMapping
     fun getAllAppUsers(): List<AppUser> = AppUserService.findAll()

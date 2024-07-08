@@ -1,5 +1,6 @@
 package com.opoinf.laboratorio_opoinf.service
 
+import com.opoinf.laboratorio_opoinf.service.CustomUserDetailsService
 import com.opoinf.laboratorio_opoinf.controller.auth.AuthenticationRequest
 import com.opoinf.laboratorio_opoinf.controller.auth.AuthenticationResponse
 import com.opoinf.laboratorio_opoinf.config.JwtProperties
