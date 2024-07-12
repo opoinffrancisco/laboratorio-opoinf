@@ -2,6 +2,8 @@ package com.opoinf.laboratorio_opoinf.controller.user
 
 import com.opoinf.laboratorio_opoinf.model.Role
 import com.opoinf.laboratorio_opoinf.model.AppUser
+import com.opoinf.laboratorio_opoinf.controller.user.UserRequest
+import com.opoinf.laboratorio_opoinf.controller.user.UserResponse
 import com.opoinf.laboratorio_opoinf.service.AppUserService
 import com.opoinf.laboratorio_opoinf.util.exception.BadRequestException
 import com.opoinf.laboratorio_opoinf.util.exception.ResourceNotFoundException
@@ -36,8 +38,8 @@ class UserController(
   }
 
   @PutMapping("/{uuid}")
-  fun updateUser(@PathVariable uuid: UUID, @Valid @RequestBody updatedUser: AppUser): UserResponse {
-    val user = userService.editar(uuid, updatedUser)
+  fun updateUser(@PathVariable uuid: UUID, @Valid @RequestBody userRequest: UserRequest): UserResponse {
+    val user = userService.edit(uuid, userRequest.toModel())
     return user?.toResponse() ?: throw BadRequestException("No se pudo editar el usuario.")
   }
 

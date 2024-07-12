@@ -9,6 +9,7 @@ data class AppUser(
     //@GeneratedValue
     @Column(name = "id", updatable = false, nullable = false, columnDefinition = "UUID DEFAULT uuid_generate_v4()")
     var id: UUID,
+    @Column(unique = true, name = "email")
     var email: String,
     var password: String,
     var role: Role
