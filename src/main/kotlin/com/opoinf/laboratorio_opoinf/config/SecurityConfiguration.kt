@@ -30,7 +30,7 @@ class SecurityConfiguration(
           .requestMatchers("/api/auth", "api/auth/refresh", "/error")
           .permitAll()
           // Permitir POST sin autenticación a "/api/user" (esto puede ser para registro de usuarios)
-          .requestMatchers(HttpMethod.POST, "/api/user")
+          .requestMatchers(HttpMethod.POST, "/api/user", "/api/auth/forgot-password", "/api/auth/reset-password")
           .permitAll()
           // Requerir rol ADMIN para cualquier solicitud a "/api/user**" excepto POST
           .requestMatchers("/api/user**")
