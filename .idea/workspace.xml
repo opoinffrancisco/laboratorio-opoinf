@@ -4,49 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa1d9dd3-379f-41f3-892b-6fa601670bdf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/LaboratorioOpoinfApplication.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/config/Configuration.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/config/JwtAuthenticationFilter.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/config/JwtProperties.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/config/SecurityConfiguration.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/controller/auth/AuthController.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/controller/auth/AuthenticationRequest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/controller/auth/AuthenticationResponse.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/controller/auth/ForgotPasswordRequest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/controller/auth/ForgotPasswordResponse.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/controller/auth/RefreshTokenRequest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/controller/auth/ResetPasswordRequest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/controller/auth/TokenResponse.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/controller/user/UserController.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/controller/user/UserRequest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/controller/user/UserResponse.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/model/PasswordResetToken.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/model/RoleUser.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/model/User.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/repository/PasswordResetTokenRepository.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/repository/RefreshTokenRepository.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/repository/UserRepository.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/service/AuthenticationService.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/service/CustomUserDetailsService.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/service/EmailService.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/service/TokenService.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/service/UserService.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/util/exception/CustomException.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/util/exception/CustomUsernameNotFoundException.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/util/exception/ForbiddenException.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/util/exception/GlobalExceptionHandler.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/opoinf/laboratorio_opoinf/util/response/ApiResponse.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/opoinf/laboratorio_opoinf/LaboratorioOpoinfApplicationTests.kt" beforeDir="false" />
+    <list default="true" id="aa1d9dd3-379f-41f3-892b-6fa601670bdf" name="Changes" comment="Agregando Dockerfile y docker-compose.yml. Se pudo crear la imagen y desplegarla localmente.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_opoinf/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_opoinf/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +31,7 @@
     </system>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -111,6 +72,15 @@
       <option name="presentableId" value="Default" />
       <updated>1722562967736</updated>
     </task>
+    <task id="LOCAL-00001" summary="Agregando Dockerfile y docker-compose.yml. Se pudo crear la imagen y desplegarla localmente.">
+      <option name="closed" value="true" />
+      <created>1722621611695</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722621611696</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,5 +93,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Agregando Dockerfile y docker-compose.yml. Se pudo crear la imagen y desplegarla localmente." />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregando Dockerfile y docker-compose.yml. Se pudo crear la imagen y desplegarla localmente." />
   </component>
 </project>
