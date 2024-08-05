@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa1d9dd3-379f-41f3-892b-6fa601670bdf" name="Changes" comment="Se actualizo la version en docker-compose.yml y se agrego deploy.sh con datos de ambientes de pruebas.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="aa1d9dd3-379f-41f3-892b-6fa601670bdf" name="Changes" comment="Intentando con .env para declarar variables de entorno y sirva para muchos entornos de ser necesario" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,12 +37,22 @@
     &quot;assignee&quot;: &quot;opoinffrancisco&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/opoinffrancisco/laboratorio-opoinf.git&quot;,
-    &quot;accountId&quot;: &quot;ed4a1ca3-14b1-4081-bd43-b96bece8cf16&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/opoinffrancisco/laboratorio-opoinf.git",
+    "accountId": "ed4a1ca3-14b1-4081-bd43-b96bece8cf16"
+  },
+  "recentNewPullRequestHead": {
+    "server": {
+      "useHttp": false,
+      "host": "github.com",
+      "port": null,
+      "suffix": null
+    },
+    "owner": "opoinffrancisco",
+    "repository": "laboratorio-opoinf"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -54,14 +62,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;devNew&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ingfr/Proyectos/dev/Spring Boot Kotlin/laboratorio-opoinf&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "#9 on devNew",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ingfr/Proyectos/dev/Spring Boot Kotlin/laboratorio-opoinf"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -103,8 +111,19 @@
       <option name="project" value="LOCAL" />
       <updated>1722814917862</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Intentando con .env para declarar variables de entorno y sirva para muchos entornos de ser necesario">
+      <option name="closed" value="true" />
+      <created>1722815952054</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1722815952054</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -120,6 +139,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Agregando Dockerfile y docker-compose.yml. Se pudo crear la imagen y desplegarla localmente." />
     <MESSAGE value="Se actualizo la version en docker-compose.yml y se agrego deploy.sh con datos de ambientes de pruebas." />
-    <option name="LAST_COMMIT_MESSAGE" value="Se actualizo la version en docker-compose.yml y se agrego deploy.sh con datos de ambientes de pruebas." />
+    <MESSAGE value="Intentando con .env para declarar variables de entorno y sirva para muchos entornos de ser necesario" />
+    <option name="LAST_COMMIT_MESSAGE" value="Intentando con .env para declarar variables de entorno y sirva para muchos entornos de ser necesario" />
   </component>
 </project>
