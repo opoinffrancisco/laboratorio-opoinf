@@ -37,22 +37,22 @@
     &quot;assignee&quot;: &quot;opoinffrancisco&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/opoinffrancisco/laboratorio-opoinf.git",
-    "accountId": "ed4a1ca3-14b1-4081-bd43-b96bece8cf16"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/opoinffrancisco/laboratorio-opoinf.git&quot;,
+    &quot;accountId&quot;: &quot;ed4a1ca3-14b1-4081-bd43-b96bece8cf16&quot;
   },
-  "recentNewPullRequestHead": {
-    "server": {
-      "useHttp": false,
-      "host": "github.com",
-      "port": null,
-      "suffix": null
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
     },
-    "owner": "opoinffrancisco",
-    "repository": "laboratorio-opoinf"
+    &quot;owner&quot;: &quot;opoinffrancisco&quot;,
+    &quot;repository&quot;: &quot;laboratorio-opoinf&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 0
@@ -65,7 +65,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "#9 on devNew",
+    "git-widget-placeholder": "devNew",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/ingfr/Proyectos/dev/Spring Boot Kotlin/laboratorio-opoinf"
   }
