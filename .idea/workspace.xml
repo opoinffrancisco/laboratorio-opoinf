@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa1d9dd3-379f-41f3-892b-6fa601670bdf" name="Changes" comment="Intentando con .env para declarar variables de entorno y sirva para muchos entornos de ser necesario" />
+    <list default="true" id="aa1d9dd3-379f-41f3-892b-6fa601670bdf" name="Changes" comment="Up">
+      <change beforePath="$PROJECT_DIR$/laboratorio_opoinf/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_opoinf/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722815952054</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Up">
+      <option name="closed" value="true" />
+      <created>1722823009027</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1722823009027</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -140,6 +150,7 @@
     <MESSAGE value="Agregando Dockerfile y docker-compose.yml. Se pudo crear la imagen y desplegarla localmente." />
     <MESSAGE value="Se actualizo la version en docker-compose.yml y se agrego deploy.sh con datos de ambientes de pruebas." />
     <MESSAGE value="Intentando con .env para declarar variables de entorno y sirva para muchos entornos de ser necesario" />
-    <option name="LAST_COMMIT_MESSAGE" value="Intentando con .env para declarar variables de entorno y sirva para muchos entornos de ser necesario" />
+    <MESSAGE value="Up" />
+    <option name="LAST_COMMIT_MESSAGE" value="Up" />
   </component>
 </project>
