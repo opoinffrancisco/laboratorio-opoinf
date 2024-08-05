@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1.143s</div>
+<div class="counter">1.243s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">contextLoads()</td>
-<td class="success">1.143s</td>
+<td class="success">1.243s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,8 +87,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>23:19:45.701 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.opoinf.laboratorio_opoinf.LaboratorioOpoinfApplicationTests]: LaboratorioOpoinfApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-23:19:45.973 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.opoinf.laboratorio_opoinf.LaboratorioOpoinfApplication for test class com.opoinf.laboratorio_opoinf.LaboratorioOpoinfApplicationTests
+<pre>02:28:58.100 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.opoinf.laboratorio_opoinf.LaboratorioOpoinfApplicationTests]: LaboratorioOpoinfApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+02:28:58.370 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.opoinf.laboratorio_opoinf.LaboratorioOpoinfApplication for test class com.opoinf.laboratorio_opoinf.LaboratorioOpoinfApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -99,24 +99,24 @@
 
  :: Spring Boot ::                (v3.3.1)
 
-2024-08-04T23:19:47.081-04:00  INFO 12516 --- [laboratorio-opoinf] [    Test worker] c.o.l.LaboratorioOpoinfApplicationTests  : Starting LaboratorioOpoinfApplicationTests using Java 17.0.11 with PID 12516 (started by ingfr in C:\Users\ingfr\Proyectos\dev\Spring Boot Kotlin\laboratorio-opoinf\laboratorio_opoinf)
-2024-08-04T23:19:47.085-04:00  INFO 12516 --- [laboratorio-opoinf] [    Test worker] c.o.l.LaboratorioOpoinfApplicationTests  : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-08-04T23:19:49.901-04:00  INFO 12516 --- [laboratorio-opoinf] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-04T23:19:50.061-04:00  INFO 12516 --- [laboratorio-opoinf] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 139 ms. Found 2 JPA repository interfaces.
-2024-08-04T23:19:51.299-04:00  INFO 12516 --- [laboratorio-opoinf] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-04T23:19:51.537-04:00  INFO 12516 --- [laboratorio-opoinf] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-04T23:19:51.657-04:00  INFO 12516 --- [laboratorio-opoinf] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-04T23:19:52.547-04:00  INFO 12516 --- [laboratorio-opoinf] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-04T23:19:52.645-04:00  INFO 12516 --- [laboratorio-opoinf] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-04T23:19:53.834-04:00  INFO 12516 --- [laboratorio-opoinf] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7ebc5be6
-2024-08-04T23:19:53.839-04:00  INFO 12516 --- [laboratorio-opoinf] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-04T23:19:54.007-04:00  WARN 12516 --- [laboratorio-opoinf] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-04T23:19:56.660-04:00  INFO 12516 --- [laboratorio-opoinf] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-04T23:19:57.501-04:00  INFO 12516 --- [laboratorio-opoinf] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-04T23:19:59.620-04:00  INFO 12516 --- [laboratorio-opoinf] [    Test worker] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2024-08-04T23:19:59.623-04:00  WARN 12516 --- [laboratorio-opoinf] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
-2024-08-04T23:19:59.859-04:00  WARN 12516 --- [laboratorio-opoinf] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-04T23:20:01.687-04:00  INFO 12516 --- [laboratorio-opoinf] [    Test worker] c.o.l.LaboratorioOpoinfApplicationTests  : Started LaboratorioOpoinfApplicationTests in 15.272 seconds (process running for 18.375)
+2024-08-05T02:28:59.523-04:00  INFO 17944 --- [laboratorio-opoinf] [    Test worker] c.o.l.LaboratorioOpoinfApplicationTests  : Starting LaboratorioOpoinfApplicationTests using Java 17.0.11 with PID 17944 (started by ingfr in C:\Users\ingfr\Proyectos\dev\Spring Boot Kotlin\laboratorio-opoinf\laboratorio_opoinf)
+2024-08-05T02:28:59.526-04:00  INFO 17944 --- [laboratorio-opoinf] [    Test worker] c.o.l.LaboratorioOpoinfApplicationTests  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-08-05T02:29:02.415-04:00  INFO 17944 --- [laboratorio-opoinf] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-05T02:29:02.575-04:00  INFO 17944 --- [laboratorio-opoinf] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138 ms. Found 2 JPA repository interfaces.
+2024-08-05T02:29:03.798-04:00  INFO 17944 --- [laboratorio-opoinf] [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-05T02:29:04.035-04:00  INFO 17944 --- [laboratorio-opoinf] [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-05T02:29:04.157-04:00  INFO 17944 --- [laboratorio-opoinf] [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-05T02:29:05.055-04:00  INFO 17944 --- [laboratorio-opoinf] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-05T02:29:05.137-04:00  INFO 17944 --- [laboratorio-opoinf] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-05T02:29:06.365-04:00  INFO 17944 --- [laboratorio-opoinf] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7b9c2387
+2024-08-05T02:29:06.370-04:00  INFO 17944 --- [laboratorio-opoinf] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-05T02:29:06.543-04:00  WARN 17944 --- [laboratorio-opoinf] [    Test worker] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-05T02:29:09.491-04:00  INFO 17944 --- [laboratorio-opoinf] [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-05T02:29:10.375-04:00  INFO 17944 --- [laboratorio-opoinf] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-05T02:29:11.891-04:00  INFO 17944 --- [laboratorio-opoinf] [    Test worker] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2024-08-05T02:29:11.893-04:00  WARN 17944 --- [laboratorio-opoinf] [    Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used for username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider.
+2024-08-05T02:29:12.088-04:00  WARN 17944 --- [laboratorio-opoinf] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-05T02:29:13.767-04:00  INFO 17944 --- [laboratorio-opoinf] [    Test worker] c.o.l.LaboratorioOpoinfApplicationTests  : Started LaboratorioOpoinfApplicationTests in 14.914 seconds (process running for 18.245)
 </pre>
 </span>
 </div>
@@ -128,7 +128,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.8</a> at 4 ago. 2024 11:20:03 p. m.</p>
+<a href="http://www.gradle.org">Gradle 8.8</a> at 5 ago. 2024 2:29:15 a. m.</p>
 </div>
 </div>
 </body>
