@@ -7,20 +7,20 @@ services:
     ports:
       - "8080:8080"
     environment:
-      - DB_DDLAUTO
-      - DB_DRIVER
-      - DB_PASSWORD
-      - DB_PLATAFORM
-      - DB_SHOWSQL
-      - DB_URL
-      - DB_USERNAME
-      - JWT_ACCESS_TOKEN_EXPIRATION
-      - JWT_KEY
-      - JWT_REFRESH_TOKEN_EXPIRATION
-      - MAIL_HOST
-      - MAIL_PASSWORD
-      - MAIL_PORT
-      - MAIL_SMTPAUTH
-      - MAIL_SMTPSTARTTLSENABLE
-      - MAIL_USERNAME
+      - DB_DDLAUTO=update
+      - DB_DRIVER=org.postgresql.Driver
+      - DB_PASSWORD=LMKcdv60734
+      - DB_PLATAFORM=org.hibernate.dialect.PostgreSQLDialect
+      - DB_SHOWSQL=true
+      - DB_URL=jdbc:postgresql://node180456-laboratorio-opoinf.mircloud.us:11015/laboratorio-opoinf
+      - DB_USERNAME=webadmin
+      - JWT_ACCESS_TOKEN_EXPIRATION=3600000
+      - JWT_KEY=12345678910123456789101234567891023
+      - JWT_REFRESH_TOKEN_EXPIRATION=7200000
+      - MAIL_HOST=smtp.gmail.com
+      - MAIL_PASSWORD=wxomaipjcyanhiqq
+      - MAIL_PORT=587
+      - MAIL_SMTPAUTH=true
+      - MAIL_SMTPSTARTTLSENABLE=true
+      - MAIL_USERNAME=soporte.opoinf@gmail.com
     restart: always
