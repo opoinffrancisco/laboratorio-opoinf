@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa1d9dd3-379f-41f3-892b-6fa601670bdf" name="Changes" comment="Up">
+    <list default="true" id="aa1d9dd3-379f-41f3-892b-6fa601670bdf" name="Changes" comment="VARIABLES de entorno">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722839424056</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="VARIABLES de entorno">
+      <option name="closed" value="true" />
+      <created>1722880580643</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1722880580643</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -185,6 +191,7 @@
     <MESSAGE value="Se actualizo la version en docker-compose.yml y se agrego deploy.sh con datos de ambientes de pruebas." />
     <MESSAGE value="Intentando con .env para declarar variables de entorno y sirva para muchos entornos de ser necesario" />
     <MESSAGE value="Up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Up" />
+    <MESSAGE value="VARIABLES de entorno" />
+    <option name="LAST_COMMIT_MESSAGE" value="VARIABLES de entorno" />
   </component>
 </project>
