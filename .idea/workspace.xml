@@ -67,7 +67,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "devNew",
+    "git-widget-placeholder": "#17 on devNew",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/ingfr/Proyectos/dev/Spring Boot Kotlin/laboratorio-opoinf"
   }
@@ -169,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722880580643</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="VARIABLES de entorno">
+      <option name="closed" value="true" />
+      <created>1722904120494</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1722904120494</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="UnknownFeatures">
