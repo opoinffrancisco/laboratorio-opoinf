@@ -5,7 +5,10 @@ services:
     build: laboratorio_opoinf
     mem_limit: 512m
     ports:
-      - "8080:8080"
+      - "80:80"
+      - "443:443"
+    networks:
+      - web
     environment:
       - DB_DDLAUTO
       - DB_DRIVER

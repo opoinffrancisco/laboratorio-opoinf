@@ -28,4 +28,4 @@ echo "MAIL_USERNAME=$MAIL_USERNAME"
 echo " "
 
 # Run Docker Compose
-docker-compose up --build
+docker-compose up -d
