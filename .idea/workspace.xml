@@ -6,6 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="aa1d9dd3-379f-41f3-892b-6fa601670bdf" name="Changes" comment="VARIABLES de entorno">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy.sh" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_opoinf/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_opoinf/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_opoinf/build/libs/laboratorio-opoinf-0.0.1-SNAPSHOT-plain.jar" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_opoinf/build/libs/laboratorio-opoinf-0.0.1-SNAPSHOT-plain.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_opoinf/build/libs/laboratorio-opoinf-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_opoinf/build/libs/laboratorio-opoinf-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_opoinf/build/reports/tests/test/classes/com.opoinf.laboratorio_opoinf.LaboratorioOpoinfApplicationTests.html" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_opoinf/build/reports/tests/test/classes/com.opoinf.laboratorio_opoinf.LaboratorioOpoinfApplicationTests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_opoinf/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_opoinf/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_opoinf/build/reports/tests/test/packages/com.opoinf.laboratorio_opoinf.html" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_opoinf/build/reports/tests/test/packages/com.opoinf.laboratorio_opoinf.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_opoinf/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_opoinf/build/resources/main/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_opoinf/build/test-results/test/TEST-com.opoinf.laboratorio_opoinf.LaboratorioOpoinfApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_opoinf/build/test-results/test/TEST-com.opoinf.laboratorio_opoinf.LaboratorioOpoinfApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_opoinf/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_opoinf/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_opoinf/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_opoinf/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_opoinf/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_opoinf/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laboratorio_opoinf/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/laboratorio_opoinf/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,9 +81,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "#17 on devNew",
+    "git-widget-placeholder": "devNew",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ingfr/Proyectos/dev/Spring Boot Kotlin/laboratorio-opoinf"
+    "last_opened_file_path": "C:/Users/ingfr/Proyectos/dev/Spring Boot Kotlin/laboratorio-opoinf/laboratorio_opoinf"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
